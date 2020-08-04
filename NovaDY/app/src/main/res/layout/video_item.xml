@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAlpha">
+
+        <ImageButton
+            android:id="@+id/ib_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAlpha"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginEnd="360dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:alpha="0.7"
+            app:srcCompat="@mipmap/ic_play_circle_outline_white_48dp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotv_like"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="17dp"
+            android:background="@color/colorAlpha"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleY="2.5"
+            android:scaleX="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/love_explosion"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotv_like_white"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="17dp"
+            android:background="@color/colorAlpha"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleY="2.2"
+            android:scaleX="2.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/love_white"/>
+
+        <TextView
+            android:id="@+id/tv_likecnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:text="0"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lotv_like" />
+
+
+        <ImageButton
+            android:id="@+id/btn_cmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="15dp"
+            android:background="#00FFFFFF"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lotv_like"
+            app:srcCompat="@mipmap/ic_chat_white_48dp" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_cmtcnt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="23dp"-->
+<!--            android:text="2.0k"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btn_cmt" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn_download"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:background="#00FFFFFF"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btn_cmt"-->
+<!--            app:srcCompat="@mipmap/ic_file_download_white_48dp" />-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotv_down"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorAlpha"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_cmt"
+            android:scaleX="1.8"
+            android:scaleY="1.8"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/download"/>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="220dp"
+            android:text="Novar"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/colorLightGrey"
+            android:text="#description# #description# #description# #description# #description##description##description##description##description##description##description#"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_sb_tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAlpha">
+
+        <SeekBar
+            android:id="@+id/sb_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="360dp"
+            android:textSize="18sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="360dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <VideoView
+        android:id="@+id/vv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_videos"
+        android:icon="@drawable/ic_subscriptions_white_36dp"
+        android:title="@string/title_videos" />
+
+    <item
+        android:id="@+id/navigation_localvideos"
+        android:icon="@drawable/ic_archive_white_36dp"
+        android:title="@string/title_localvideos" />
+
+    <item
+        android:id="@+id/navigation_empty"
+        android:icon="@drawable/ic_photo_filter_white_36dp"
+        android:onClick="openCamera"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_email_white_36dp"
+        android:title="@string/title_message" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_tune_white_36dp"
+        android:title="@string/title_settings" />
+</menu>

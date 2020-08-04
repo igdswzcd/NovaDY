@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorByteDance"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ctr_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorByteDance">
+
+        <TextView
+            android:id="@+id/ctr_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/ctr_iv_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_chevron_left_white_48dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLightGrey" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ctr_edit_send_content"
+        android:layout_below="@id/ctr_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ctr_msg_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/chat_item"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/ctr_edit_send_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/ctr_ed_say"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fadeScrollbars="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="发送消息..."
+            android:lineSpacingExtra="2dp"
+            android:maxLines="4"
+            android:minHeight="36dp"
+            android:padding="10dp"
+            android:layout_marginEnd="80dp"
+            android:scrollbars="vertical"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorLightGrey"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/ctr_btn_send_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:gravity="start|center_vertical"
+            android:src="@mipmap/ic_near_me_white_48dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:alpha="0.3"
+            android:background="@color/colorLightGrey" />
+    </RelativeLayout>
+
+</RelativeLayout>

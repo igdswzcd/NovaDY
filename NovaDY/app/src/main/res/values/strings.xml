@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NovaDY</string>
+    <string name="title_videos">首页</string>
+    <string name="title_localvideos">本地</string>
+    <string name="title_message">消息</string>
+    <string name="title_settings">设置</string>
+</resources>
